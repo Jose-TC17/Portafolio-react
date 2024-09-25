@@ -1,0 +1,35 @@
+/* estilos del contenedor general del footer */
+.footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* estilos del hr */
+.hr {
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(45deg, transparent, var(--color-white), transparent);
+    border: none;
+}
+
+/* estilos del contenedor del texto */
+.contentText {
+    width: 100%;
+    height: 60px;
+}
+
+/* estilos del parrafo del footer */
+.pFooter {
+    text-align: center;
+    margin: 20px 0;
+    font-family: var(--font-montserrat);
+    color: var(--color-white);
+}
+
+.pFooter span {
+    color: var(--color-blue);
+    font-weight: 600;
+}

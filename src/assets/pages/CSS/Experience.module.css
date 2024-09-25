@@ -1,0 +1,88 @@
+/* contenedor de experiencia */
+.experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* contenedor de experiencia */
+.containerExperience {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 40px;
+    justify-content: start;    
+    margin-bottom: 20px;
+}
+
+
+@media (min-width: 900px) {
+    .containerExperience {
+        flex-direction: row;
+    }
+    .contentExp {
+        width: 50%;
+    }
+}
+
+/* estilos del titulo */
+.h3 {
+    font-family: var(--font-montserrat);
+    color: var(--color-title);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.h3Two{
+    font-family: var(--font-montserrat);
+    color: var(--color-title);
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+@media (min-width: 800px) {
+    .h3, .h3Two {
+        font-size: 22px;
+    }
+}
+
+/* container de las notas de las experiencias */
+.contentNotes {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 20px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.contentNotes::before {
+    content: "";
+    width: 4px;
+    height: 100%;
+    background: #272e38;
+    position: absolute;
+    left: 10px;
+}
+
+.contentSN {
+    width: 100%;
+}
+
+@media (min-width: 900px) {
+    .contentSN {
+        width: 50%;
+    }
+}
+
+/* estilos de los iconos */
+.contentSocialNetworks {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}

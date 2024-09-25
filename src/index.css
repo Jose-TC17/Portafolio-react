@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #171B22;    
+}
+
+:root {
+    --font-montserrat: "montserrat";
+    --background: #171b22;
+    --color-title: #6DA625;
+    --color-white: #fff;
+    --color-blue: #1b82bc;
+    --color-blue-two: rgb(36, 98, 214);
+    --color-blue-two-hover: rgb(27, 84, 190);
+    --color-red:  rgb(240, 31, 31);
+    --color-red-hover: rgb(219, 28, 28);
+    --color-border: #bfc2ca;
+    --color-onBorder: #8d8e91;
+    --color-offBorder: #36334169;
+    --color-borderSocial: #7e7d8369;
+}
+
+img::selection, br::selection {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+    background: var(--background);
+
+}
+
+::-webkit-scrollbar-thumb {
+    width: 12px;
+    background: #9ba0a7;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+}

@@ -1,0 +1,306 @@
+/* estilos del contenedor de la carta */
+.contentCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    background: #12171a;
+    border-radius: 10px;
+    position: relative;
+    outline: 2px solid #1d2530;
+    z-index: 10;
+    transition: .3s;
+}
+
+/* after del contenedor de la carta */
+.contentCard::after {
+        content: "";
+        width: 100%;
+        height: calc(100% - 130px);
+        background: #12171a;
+        position: absolute;
+        transition: .3s;
+        top: -100%;
+        z-index: 1;
+}
+
+/* media query con el after del contenedor de la carta */
+@media (min-width: 300px) {
+    .contentCard::after {
+        height: calc(100% - 70px);
+    }
+}
+
+/* after del contenedor de la carta estando activo */
+.contentCard.active::after {
+    top: 0;
+}
+
+/* hover del contenedor de la carta */
+.contentCard:hover {
+    transform: translateY(-5px);
+    outline: 2px solid #45556b;
+}
+
+/* contenido del background de la imagen */
+.containerBgImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* estilos de la carta con la imagen */
+.contentCardImg {
+    width: 100%;
+    height: calc(100% - 130px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    top: -100%;
+    transition: .3s;
+    justify-content: center;
+    background: #12171a;
+    position: absolute;
+    z-index: 2;
+}
+
+/* contenido de la carta de la imagen active */
+.contentCardImg.active {
+    top: 0;
+}
+
+/* media query del contenedor de la carta de la imagen */
+@media (min-width: 300px) {
+    .contentCardImg {
+        height: calc(100% - 80px);
+    }
+}
+
+/* media query */
+@media (min-width: 410px) {
+    .contentCardImg {
+        width: 350px;
+        transform: translateY(9px);
+        border-radius: 10px;
+    }
+}
+
+/* media query */
+@media (min-width: 700px) {
+    .contentCardImg {
+        width: 100%;
+        transform: translateY(0);
+        border-radius: 0;
+    }
+}
+
+/* background de la imagen */
+.bgImg {
+    width: 100%;
+    height: 100%;
+    filter: brightness(90%) saturate(90%);
+    position: relative;
+    transition: .3s;
+}
+
+/* efectos de la imagen cuando hace hover en el contenedor de la carta */
+.contentCard:hover .bgImg {
+    filter: brightness(100%) saturate(100%);
+}
+
+/* media query de la imagen */
+@media (min-width: 400px) {
+    .bgImg {
+        width: 350px;
+        border-radius: 10px;
+    }
+}
+
+/* media query */
+@media (min-width: 700px) {
+    .bgImg {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+/* before del background de la imagen */
+.contentCardImg.active::after {
+    content: var(--name-bg-project);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--font-montserrat);
+    color: var(--color-white);
+    white-space: pre-wrap;
+    line-height: 23px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #00000096;
+    top: -100%;
+    transition: .3s;
+}
+
+/* media query de after del contenedor de la carta de la imagen activa */
+@media (min-width: 400px) {
+    .contentCardImg.active::after {
+        width: 350px;
+        height: calc(100%);
+        border-radius: 10px;
+        top: calc(-100% - 10px);
+    }
+}
+
+@media (min-width: 800px) {
+    .contentCardImg.active::after {
+        border-radius: 0;
+        width: 100%;
+    }
+}
+
+/* hover de after del contenedor de la card de la imagen activa */
+.contentCardImg.active:hover::after {
+    top: 0;
+}
+
+/* estilos del titulo */
+.h3 {
+    width: 100%;
+    font-family: var(--font-montserrat);
+    font-weight: 600;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 0 15px;
+    color: #7096c2;
+}
+
+/* estilos del parrafo */
+.p {
+    font-family: var(--font-montserrat);
+    color: var(--color-white);
+    padding: 15px;
+    overflow-y: scroll;
+}
+
+/* estilos del scroll del parrafo */
+.p::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* estilos de las imagenes y los botones */
+.contentImgBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* estilos de las redes sociales */
+.tec {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* imagen de la tecnologia */
+.imgTec {
+    width: 25px;
+}
+
+/* estilos del contenido de la imagen de tecnologias */
+.contentImgTec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    border-radius: 10px;
+    height: 40px;
+    border: 2px solid var(--color-offBorder);
+    transition: .3s;
+}
+
+/* estilos hover */
+.contentImgTec:hover {
+    border: 2px solid var(--color-onBorder);
+}
+
+/* contenedor de los botones */
+.contentA {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* media query del contenedor de los botones */
+@media (min-width: 300px) {
+    .contentA {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+/* estilos del github */
+.github {
+    background: rgb(31, 114, 223);
+    color: var(--color-white);
+    font-family: var(--font-montserrat);
+    width: 120px;
+    height: 40px;
+    margin: 20px 0;
+    text-align: center;
+    outline: 1px solid rgb(22, 91, 194);
+    line-height: 40px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+/* hover del boton de github */
+.github:hover {
+    background: #1265c4;
+    transform: translateY(-3px);
+}
+
+/* estilos del boton de la imagen */
+.btnImg {
+    width: 100px;
+    height: 40px;
+    text-decoration: none;
+    font-family: var(--font-montserrat);
+    color: var(--color-onBorder);
+    border-radius: 10px;
+    text-align: center;
+    transition: .3s;
+    line-height: 40px;
+    outline: 2px solid var(--color-offBorder);
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* estilos del hover de la imagen */
+.btnImg:hover {
+    color: var(--color-white);
+    outline: 2px solid var(--color-onBorder);
+    transform: translateY(-3px);
+}
+
+/* media query del boton de la imagen */
+@media (min-width: 300px) {
+    .btnImg {
+        margin-bottom: 0;
+    }
+}

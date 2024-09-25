@@ -1,0 +1,59 @@
+/* estilos del contenedor de los proyectos */
+.Projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* container de los proyectos */
+.containerProjects {
+    width: 100%;
+}
+
+/* estilos del titulo */
+.h3 {
+    width: 100%;
+    color: var(--color-title);
+    font-family: var(--font-montserrat);
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* media query estilos del titulo */
+@media (min-width: 800px) {
+    .h3 {
+        font-size: 22px;
+    }
+}
+
+/* estilos del párrafo */
+.p {
+    font-family: var(--font-montserrat);
+    color: var(--color-white);
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* estilos de la carta de los proyectos */
+.containerCardProjects {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* estilos del media query */
+@media (min-width: 270px){
+    .containerCardProjects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}

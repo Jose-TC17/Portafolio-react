@@ -1,0 +1,21 @@
+.p {
+    font-family: var(--font-montserrat);
+    color: var(--color-white);
+    font-weight: 300;
+    position: relative;
+}
+
+.p::before {
+    content: var(--num-experience);
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #2b3446;
+    top: 0;
+    border-radius: 50%;
+    left: -28px;
+
+}

@@ -1,0 +1,30 @@
+.a{
+    display: flex;
+    flex-direction: row;
+    min-width: 160px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-montserrat);
+    color: var(--color-borderSocial);
+    text-decoration: none;
+    font-weight: 500;
+    gap: 10px;
+    padding: 5px 10px;
+    background: transparent;
+    border: 2px solid var(--color-borderSocial);
+    border-radius: 10px;
+    transform: translateY(0);
+    transition: .3s ;
+}
+
+.a:hover{
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    animation: animate-a .4s 1 linear;
+    transform: translateY(-2px);
+}
+
+.img{
+    width: 28px;
+}

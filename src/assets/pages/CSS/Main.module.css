@@ -1,0 +1,330 @@
+/* estilos del main */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - 60px);
+}
+
+/* estilos del contenedor del main */
+.containerMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    min-width: (300px, 100%);
+    max-width: 500px;
+}
+
+@media (min-width: 700px){
+    .containerMain {
+        max-width: 650px;
+    }
+}
+
+@media (min-width: 800px) {
+    .containerMain {
+        max-width: 750px;
+    }
+}
+
+/*  */
+.imgProgramerCareer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+@media (min-width: 700px) {
+    .imgProgramerCareer {
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+/* titulo y descripcion */
+@media (min-width: 700px) {
+    .titleDescription {
+        width: 100%;
+        margin-left: 20px;
+        width: 60%;
+    }
+    .imgProgramerCareer{
+        flex-direction: row;
+    }
+}
+
+/*  */
+.textName{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* estilos del nombre */
+.textNameP {
+    font-family: var(--font-montserrat);
+    color: var(--color-white);
+    line-height: 29px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* estilos del texto del span */
+.nameText {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* estilos del span del nombre */
+.nameSpan {
+    font-weight: 500;
+    color: var(--color-title);
+    font-size: 22px;
+}
+
+/* contenido de la imagen del contenedor */
+.contentImgProgramer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
+    border-radius: 50%;
+    margin: 20px;
+    background-image: url("../../img/perfil.webp");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    filter: saturate(100%) sepia(10%) contrast(110%);
+}
+
+.contentImgProgramer::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    opacity: 0;
+    animation: animation-img 2.5s infinite linear;
+}
+
+.contentImgProgramer::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    opacity: 0;
+    animation: animation-img 2.5s infinite 1s linear;
+}
+
+@media (min-width: 500px) {
+    .contentImgProgramer{
+        width: 160px;
+        height: 160px;
+    }
+    .contentImgProgramer::before{
+        width: 160px;
+        height: 160px;
+    }
+    .contentImgProgramer::after{
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media (min-width: 800px) {
+    .contentImgProgramer{
+        width: 180px;
+        height: 180px;
+    }
+    .contentImgProgramer::before{
+        width: 180px;
+        height: 180px;
+    }
+    .contentImgProgramer::after{
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@keyframes animation-img {
+    0% {
+        box-shadow: 0 0 50px #2c446e, 0 0 125px rgb(23, 27, 66);
+        border: 1px solid #232344;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+        box-shadow: 0 0 50px #2c446e, 0 0 125px rgb(23, 27, 66);
+        border: 1px solid #232344;
+    }
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+        box-shadow: 0 0 50px #2c446e, 0 0 125px rgb(23, 27, 66);
+        border: 1px solid #232344;
+    }
+}
+
+/* estilos de la imagen del contendor */
+.imgProgramer {
+    height: 100%;
+    background-position: center;
+}
+
+/* estilos del titulo */
+.h1 {
+    width: 100%;
+    max-width: 300px;
+    font-family: var(--font-montserrat);
+    text-align: center;
+    color: var(--color-white);
+    font-size: 16px;
+    margin: 10px 0;
+    transition: .3s;
+    font-weight: 400;
+    position: relative;
+}
+
+.h1 span {
+    font-weight: 600;
+    font-size: 24px;
+    color: #1F79CC;
+}
+
+@media (min-width: 500px) {
+    .h1{
+        font-size: 18px;
+        max-width: 350px;
+    }
+    .h1 span {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 700px) {
+    .h1{
+        text-align: start;
+        margin-bottom: 15px;
+        max-width: 100%;           
+    }
+}
+
+@media (min-width: 800px) {
+    .h1 span{
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .h1 span{
+        font-size: 30px;
+    }
+}
+
+/* estilos del puntero de escritura */
+.punter {
+    width: 3px;
+    height: 30px;
+    background: #9694a78a;
+    animation: animate-punter .8s infinite linear;
+    position: absolute;  
+}
+
+@keyframes animate-punter {
+    0%{
+        background: #9694a78a;
+    }
+    50%{
+        background: #9694a700;
+    }
+    100%{
+        background: #9694a78a;
+    }
+}
+
+@media (min-width: 800px) {
+    .punter {
+        bottom: 2px;
+    }
+}
+
+/* estilo del texto y de las imagenes */
+.textImgSocial {
+    width: 100%;
+    max-width: 400px;
+    transition: .3s;
+}
+
+/* estilos de la descripcion */
+.pDescription {
+    font-family: var(--font-montserrat);
+    font-weight: 300;
+    color: #fff;
+    line-height: 25px;
+    width: 100%;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+@media (min-width: 700px){
+    .pDescription {
+        font-size: 18px;
+    }
+}
+
+/* contenedor de redes sociales */
+.containerSocial {
+    display: flex;
+    gap: 15px;
+    width: 90%;
+    margin: 20px 0;
+}
+
+@media (min-width: 700px){
+    .containerSocial {
+        margin: 0;
+        margin-top: 20px;
+    }
+}
+
+/* iconos de redes sociales */
+.imgSocial {
+    width: 30px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+/* hover */
+.imgSocial:hover {
+    transform: scale(1.1);
+}
+
+/* estilos del contenedor de Botones */
+.containerBtnSocial {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 400px;
+    justify-content: space-between;
+}
+
+@media (min-width: 700px) {
+    .containerBtnSocial {
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: 900px) {
+    .containerBtnSocial {
+        margin-top: 20px;
+    }
+}

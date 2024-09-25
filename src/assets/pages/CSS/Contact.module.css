@@ -1,0 +1,242 @@
+/* estilos del contenedor general de contactame */
+.contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* contenedor de contacto y de los beneficios */
+.containerContactBenifits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+}
+
+@media (min-width: 800px) {
+    .containerContactBenifits {
+        flex-direction: row;
+        gap: 50px;
+    }
+}
+
+/* estilos del contenedor de contacto */
+.containerContact {
+    width: 100%;
+}
+
+/* media query del contenedor de contacto */
+@media (min-width: 800px) {
+    .containerContact {
+        width: 50%;
+    }
+}
+
+/* estilos del titulo */
+.h3 {
+    font-family: var(--font-montserrat);
+    font-weight: 500;
+    color: var(--color-title);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 800px) {
+    .h3 {
+        font-size: 22px;
+    }
+}
+
+/* texto de contacto de emails */
+.pEmails {
+    font-family: var(--font-montserrat);
+    color: var(--color-white);
+    font-weight: 300;
+    line-height: 23px;
+    margin-bottom: 20px;
+}
+
+/* contenedor de los enlaces de gmail */
+.containerEmails {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* estilos de los botones */
+.aEmails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-onBorder);
+    width: 100%;
+    height: 40px;
+    will-change: transform;
+    color: var(--color-onBorder);
+    font-family: var(--font-montserrat);
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s;
+    transform: scale(1);
+    background: transparent;
+    border-radius: 10px;
+}
+
+.aEmails:hover{
+    animation: animate-btnContact .3s 1 linear;
+}
+
+@keyframes animate-btnContact {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(.9);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+/* estilos del enlace de email */
+.aEmails.email:hover {
+    background: var(--color-red);
+    border: 2px solid var(--color-red-hover);
+    color: var(--color-white);
+}
+
+/* estilos del enlace de outlook */
+.aEmails.outlook:hover {
+    color: var(--color-white);
+    background: var(--color-blue-two);
+    border: 2px solid var(--color-blue-two-hover)
+}
+
+/* estilos del texto de contacto de whatsapp */
+.pWhatsApp {
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-montserrat);
+    color: var(--color-white);
+    font-weight: 300;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+.containerAWhatsApp {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* estilos del enlace de whatsapp */
+.aWhatsApp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    line-height: 25px;
+    width: 90%;
+    height: auto;
+    will-change: transform;
+    transform: scale(1);
+    transition: .3s;
+    /* height: 40px; */
+    font-family: var(--font-montserrat);
+    color: var(--color-white);
+    text-decoration: none;
+    background: rgb(18, 160, 18);
+    border-radius: 10px;  
+}
+
+@media(min-width: 240px) {
+    .aWhatsApp {
+        height: 40px;
+        line-height: 40px;
+    }
+}
+
+/* hover de los estilos del enlace de whatsapp */
+.aWhatsApp:hover {
+    transform: scale(1.1);
+    background: rgb(9, 173, 9);
+}
+
+/* estilos de la imagen de whatsapp */
+.imgWhatsApp {
+    display: none;
+    width: 25px;
+}
+
+@media (min-width: 300px) {
+    .aWhatsApp {
+        width: 250px;
+    }
+
+    .imgWhatsApp {
+        display: flex;
+    }
+}
+
+
+/* estilos del contenedor de los beneficios */
+.benefits {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    justify-content: center;
+    border: 2px dotted var(--color-onBorder);
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.benefits:hover {
+    border: 2px dotted var(--color-white);
+}
+
+@media (min-width: 800px) {
+    .benefits {
+        width: 40%;
+    }
+}
+
+/* texto de beneficios */
+.pBenefits {
+    font-family: var(--font-montserrat);
+    color: var(--color-white);
+    font-weight: 300;
+}
+
+/* contenedor de listas */
+.containerList {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* estilos del li de beneficios */
+.containerList li {
+    font-family: var(--font-montserrat);
+    color: var(--color-white);
+    font-weight: 300;
+}
+
+/* estilos del marcado de las listas */
+.containerList li::marker {
+    content: "✅  ";
+    display: flex;
+}
