@@ -112,7 +112,7 @@
     height: 150px;
     border-radius: 50%;
     opacity: 0;
-    animation: animation-img 2.5s infinite linear;
+    /* animation: animation-img 2.5s infinite linear; */
 }
 
 .contentImgProgramer::after {
@@ -122,7 +122,22 @@
     height: 150px;
     border-radius: 50%;
     opacity: 0;
-    animation: animation-img 2.5s infinite 1s linear;
+    /* animation: animation-img 2.5s infinite 1s linear; */
+}
+
+@media (max-width: 700px) {
+    .contentImgProgramer::after {
+        transform: scale(1.1);
+        opacity: 1;
+        box-shadow: 0 0 50px #2c446e, 0 0 125px rgb(23, 27, 66);
+        border: 1px solid #232344;
+    }
+}
+
+@media (min-width: 700px){
+    .contentImgProgramer::after {
+        animation: animation-img 2.5s infinite 1s linear;
+    }
 }
 
 @media (min-width: 500px) {
