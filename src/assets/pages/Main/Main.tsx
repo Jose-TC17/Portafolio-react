@@ -105,7 +105,7 @@ export default function Main() {
             idBtn="seeMore"
           />
           <BtnSocial
-            nameBtn="Contactarme"
+            nameBtn="Contáctame"
             linkBtn="#contact"
             clss={styleBtn.contact}
             idBtn="contact"
