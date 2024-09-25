@@ -47,9 +47,17 @@
     }
 }
 
+.titleDescription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 /* titulo y descripcion */
 @media (min-width: 700px) {
     .titleDescription {
+        display: block;
         width: 100%;
         margin-left: 20px;
         width: 60%;
