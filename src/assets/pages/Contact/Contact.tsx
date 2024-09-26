@@ -26,7 +26,7 @@ export default function Contact() {
               <a
                 className={[styleContact.aEmails, styleContact.email].join(" ")}
                 href={
-                  "https://mail.google.com/mail/?view=cm&fs=1&to=josetuctoxdos1441@gmail.com&su=Mensaje del Portafolio"
+                  "mailto:josetuctoxdos1441@gmail.com?subject=Mensaje del Portafolio"
                 }
                 target="_blank"
               >
